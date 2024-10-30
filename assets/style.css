@@ -1,0 +1,202 @@
+/* variables declaration */
+:root {
+  --blue-color: #011d51;
+  --secondary-blue-color: #032763;
+  --light-blue-color: #70a7e6;
+  --extra-light-blue-color: #d0e3fb;
+  --white-color: #ffffff;
+  --secondary-white-color: #F6F8FF;
+  --golden-color: #bf9745;
+
+  --primary-font: 'Gowun Batang', sans-serif;
+  --secondary-font: 'Montserrat', sans-serif;
+
+}
+
+/* keyframes */
+
+/* générale */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: var(--extra-light-blue-color);
+  color: var(--blue-color);
+}
+
+main {
+  width: 100%;
+}
+
+p {
+  margin: 0;
+  font-family: var(--secondary-font);
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--primary-font);
+  line-height: 1;
+}
+
+h2 {
+  margin: 0;
+  font-family: var(--primary-font);
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue-color);
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+figcaption {
+  margin: 0;
+  font-family: var(--primary-font);
+  line-height: 1;
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  /* Hérite de la police de l'élément parent */
+  color: inherit;
+  /* Hérite de la couleur de l'élément parent */
+  cursor: pointer;
+  outline: none;
+  /* Retire le contour sur certains navigateurs */
+  font-family: var(--secondary-font);
+}
+
+.a-txt {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  /* added line */
+}
+
+/*style*/
+
+/*loader*/
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 120vh;
+  gap: 40px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border-radius: 10px 10px 0 0;
+  position: relative;
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    figcaption {
+      font-size: 3.75rem;
+      font-weight: lighter;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(100% - 40px);
+    height: fit-content;
+    gap: 30px;
+    color: var(--white-color);
+    border-radius: 12px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      border-radius: 16px;
+      box-shadow: 0px 10px 15px -7px #70a7e6;
+      border: 1px solid var(--white-color);
+      background-color: rgba(255, 255, 255, 0.2);
+      text-align: center;
+
+      figure {
+        width: 100%;
+        height: 100%;
+
+        img {
+          display: none;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 16px;
+          filter: brightness(0.7);
+          /* Diminue la luminosité de l'image */
+
+        }
+
+        figcaption {
+
+          h2 {
+            text-transform: uppercase;
+          }
+
+          i {
+            border-radius: 100%;
+            width: fit-content;
+            padding: 16px;
+            margin-top: 20px;
+            background-color: white;
+            color: var(--blue-color);
+            box-shadow: 0px 10px 15px -7px var(--blue-color);
+            text-transform: uppercase;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}
